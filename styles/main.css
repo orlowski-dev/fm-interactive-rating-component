@@ -1,0 +1,172 @@
+@import url('colors.css');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+p {
+    font-size: 15px;
+    color: var(--light-grey);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+    height: 100vh;
+}
+
+
+.component-section {
+    margin: 30px;
+    padding: 30px;
+    background-color: var(--dark-blue);
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 360px;
+    max-width: 315px;
+}
+
+.rating-state .start-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--medium-grey-al);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.rating-state .start-icon img {
+    height: 14px;
+}
+
+.rating-state h2,
+.thank-you-state h2 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.rating-state p {
+    margin-bottom: 16px;
+}
+
+.rating-state form .ratings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.rating-state form .ratings label {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--medium-grey-al);
+    font-weight: 700;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .15s ease-in-out;
+}
+
+.rating-state form .ratings label:hover,
+.rating-state form .ratings label:active {
+    background-color: var(--light-grey);
+}
+
+.rating-state form .ratings label.selected {
+    background-color: var(--orange);
+}
+
+.rating-state form .ratings input[type="radio"] {
+    display: none;
+}
+
+.rating-state form button {
+    background-color: var(--orange);
+    border-radius: 30px;
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+    padding: 12px;
+    font-size: .88rem;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .1s ease-in-out, color .1s ease-in-out;
+}
+
+.rating-state form button:hover,
+.rating-state form button:active {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.sliding-out {
+    animation: .1s slideOut forwards;
+}
+
+.sliding-in {
+    animation: .1s slideIn forwards;
+}
+
+.thank-you-state {
+    text-align: center;
+    transform: translateX(200%);
+    display: none;
+}
+
+.thank-you-state img {
+    margin: 0 auto;
+    display: block;
+    height: 98px;
+}
+
+.thank-you-state .what-was-selected {
+    background-color: var(--medium-grey-al);
+    display: inline-block;
+    margin: 16px 0;
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: .9rem;
+    color: var(--orange);
+}
+
+.attribution {
+    background-color: var(--very-dark-blue);
+    color: white;
+    padding: 12px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--orange);
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-120%);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
